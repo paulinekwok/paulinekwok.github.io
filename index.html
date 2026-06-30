@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pauline Kwok — Data Strategist & Storyteller</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
+  *,*::before,*::after{box-sizing:border-box;}
+  body{margin:0;padding:0;font-family:'Inter',sans-serif;color:#3a3a3a;background:#fff;}
+  .rp-nav{background:rgba(255,255,255,0.93);border-bottom:0.5px solid rgba(201,223,218,0.5);padding:16px 48px;display:flex;align-items:center;justify-content:space-between;}
+  .rp-nav-logo{font-size:17px;font-weight:600;color:#2a2a2a;letter-spacing:-0.02em;}
+  .rp-nav-logo span{color:#8EAFAA;}
+  .rp-nav-links{display:flex;gap:30px;align-items:center;}
+  .rp-nav-links a{font-size:12px;font-weight:400;color:#5a5a5a;text-decoration:none;cursor:pointer;transition:color 0.2s;}
+  .rp-nav-links a:hover{color:#5E8788;}
+  .rp-hero{display:grid;grid-template-columns:1fr 2fr;min-height:88vh;position:relative;}
+  .rp-hero-left{background:linear-gradient(160deg,#F4F2EE 0%,#E2ECE9 30%,#C9DFDA 60%,#D9E2DF 85%,#F4F2EE 100%);background-size:300% 300%;animation:hg 12s ease infinite;}
+  @keyframes hg{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  .rp-hero-right{background:#fff;display:flex;flex-direction:column;justify-content:center;padding:72px 64px 72px 190px;}
+  .rp-float-card{position:absolute;left:calc(33.333% - 118px);top:50%;transform:translateY(-50%);background:#fff;border:0.5px solid rgba(201,223,218,0.7);border-radius:14px;padding:36px 28px;text-align:center;width:236px;z-index:10;box-shadow:0 8px 40px rgba(94,135,136,0.13);}
+  .rp-avatar{width:108px;height:108px;border-radius:50%;background:linear-gradient(135deg,#C9DFDA 0%,#8EAFAA 100%);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .rp-avatar img{width:100%;height:100%;object-fit:cover;display:block;}
+  .rp-card-name{font-size:17px;font-weight:600;color:#2a2a2a;margin:0 0 4px;letter-spacing:-0.02em;line-height:1.25;white-space:nowrap;}
+  .rp-card-divider{width:32px;height:2px;background:#8EAFAA;margin:12px auto 14px;border-radius:2px;}
+  .rp-card-role{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#8EAFAA;margin:0 0 20px;font-weight:400;}
+  .rp-card-socials{display:flex;gap:16px;justify-content:center;}
+  .rp-card-socials a{color:#3a3a3a;font-size:17px;text-decoration:none;opacity:0.55;transition:opacity 0.2s;}
+  .rp-card-socials a:hover{opacity:1;}
+  .rp-hello{font-family:'Inter',sans-serif;font-size:80px;font-weight:700;color:#1a1a1a;line-height:1.0;margin:0 0 12px;letter-spacing:-0.04em;}
+  .rp-hero-sub{font-size:15px;font-weight:300;color:#7a8a8b;margin:0 0 32px;}
+  .rp-hero-btns{display:flex;gap:12px;margin-bottom:32px;}
+  .rp-btn-solid{background:#5E8788;color:#fff;border:none;padding:12px 28px;border-radius:40px;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif;transition:background 0.2s;}
+  .rp-btn-solid:hover{background:#49585A;}
+  .rp-btn-solid:disabled{opacity:0.6;cursor:default;}
+  .rp-btn-outline{background:transparent;color:#2a2a2a;border:1.5px solid #2a2a2a;padding:12px 28px;border-radius:40px;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif;transition:all 0.2s;}
+  .rp-btn-outline:hover{background:#f5f5f5;}
+  .rp-hero-bio{font-size:14px;line-height:1.9;color:#5a5a5a;max-width:420px;}
+  .rp-rule{height:0.5px;background:#edeae5;}
+  .rp-section{padding:72px 52px;max-width:880px;margin:0 auto;}
+  .rp-eyebrow{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#8EAFAA;margin:0 0 8px;display:flex;align-items:center;gap:10px;}
+  .rp-eyebrow::before{content:'';display:inline-block;width:18px;height:0.5px;background:#C9DFDA;}
+  .rp-h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:400;color:#2a2a2a;margin:0 0 44px;line-height:1.1;}
+  .rp-exp-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
+  .rp-exp-h3{font-size:13px;font-weight:500;color:#3a3a3a;margin:0;}
+  .rp-dl-btn{background:#5E8788;color:#fff;border:none;padding:8px 18px;border-radius:7px;font-size:11px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;display:inline-flex;align-items:center;gap:6px;}
+  .rp-job{border:0.5px solid #edeae5;border-radius:10px;padding:24px 28px;margin-bottom:14px;background:#faf9f7;display:grid;grid-template-columns:168px 1fr;gap:20px;}
+  .rp-job-date{font-size:11px;font-weight:500;color:#8EAFAA;margin:0 0 4px;}
+  .rp-job-title{font-size:11px;font-weight:600;color:#5E8788;letter-spacing:0.06em;text-transform:uppercase;margin:0 0 3px;}
+  .rp-job-co{font-size:13px;color:#3a3a3a;margin:0 0 2px;font-weight:500;}
+  .rp-job-loc{font-size:11px;color:#aaa;margin:0;}
+  .rp-job-body{font-size:13px;line-height:1.8;color:#5a5a5a;}
+  .rp-job-body ul{margin:0;padding-left:16px;}
+  .rp-job-body li{margin-bottom:5px;}
+  .rp-skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:13px;}
+  .rp-skill-box{background:#faf9f7;border:0.5px solid #edeae5;border-radius:10px;padding:20px;}
+  .rp-skill-label{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5E8788;font-weight:500;margin:0 0 12px;}
+  .rp-pill{display:inline-block;background:#eef5f4;color:#3a5e5e;font-size:11px;padding:4px 10px;border-radius:20px;margin:0 5px 6px 0;border:0.5px solid #C9DFDA;}
+  .rp-proj-card{border:0.5px solid #edeae5;border-radius:10px;overflow:hidden;margin-bottom:14px;display:grid;grid-template-columns:1fr 220px;background:#faf9f7;transition:border-color 0.2s;}
+  .rp-proj-card:hover{border-color:#8EAFAA;}
+  .rp-proj-body{padding:24px 28px;}
+  .rp-proj-num{font-family:'Cormorant Garamond',serif;font-size:12px;color:#C9DFDA;margin:0 0 6px;}
+  .rp-proj-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:#2a2a2a;margin:0 0 2px;}
+  .rp-proj-title a{color:#2a2a2a;text-decoration:none;transition:color 0.2s;}
+  .rp-proj-title a:hover{color:#5E8788;}
+  .rp-proj-sub{font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#8EAFAA;margin:0 0 14px;}
+  .rp-proj-desc{font-size:13px;line-height:1.8;color:#5a5a5a;margin:0;}
+  .rp-proj-thumb{background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;border-left:0.5px solid #edeae5;}
+  .rp-proj-thumb img{width:100%;height:100%;object-fit:cover;object-position:top left;display:block;}
+  .rp-proj-email-note{display:inline-flex;align-items:center;gap:5px;margin-top:10px;font-size:11px;color:#5E8788;font-weight:500;letter-spacing:0.04em;background:#eef5f4;border:0.5px solid #C9DFDA;border-radius:6px;padding:5px 10px;text-decoration:none;}
+  .rp-proj-email-note:hover{background:#C9DFDA;}
+  .rp-contact-wrap{background:linear-gradient(160deg,#F4F2EE 0%,#E2ECE9 50%,#D9E2DF 100%);padding:72px 52px;text-align:center;}
+  .rp-contact-inner{max-width:500px;margin:0 auto;}
+  .rp-contact-form{background:rgba(255,255,255,0.9);border:0.5px solid rgba(201,223,218,0.6);border-radius:14px;padding:36px;text-align:left;margin-top:36px;}
+  .rp-form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:13px;}
+  .rp-form-field{margin-bottom:13px;}
+  .rp-form-field label{display:block;font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#8EAFAA;margin-bottom:7px;}
+  .rp-form-field input,.rp-form-field textarea{width:100%;background:#faf9f7;border:0.5px solid #e0dbd3;border-radius:7px;padding:9px 13px;font-size:13px;color:#3a3a3a;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.2s;}
+  .rp-form-field input:focus,.rp-form-field textarea:focus{border-color:#8EAFAA;}
+  .rp-form-field textarea{resize:vertical;min-height:90px;}
+  .rp-form-status{font-size:12px;margin-top:10px;text-align:center;min-height:16px;}
+  .rp-form-status.ok{color:#5E8788;}
+  .rp-form-status.err{color:#b05c4a;}
+  .rp-footer{background:#2a2a2a;padding:28px 52px;display:flex;justify-content:space-between;align-items:center;}
+  .rp-footer-copy{font-size:11px;color:rgba(255,255,255,0.35);}
+  .rp-footer-cols{display:flex;gap:40px;}
+  .rp-footer-col-label{font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:#8EAFAA;margin:0 0 4px;}
+  .rp-footer-col-val{font-size:11px;color:rgba(255,255,255,0.65);margin:0;}
+</style>
+</head>
+<body>
+
+<nav class="rp-nav">
+  <span class="rp-nav-logo">PK<span>.</span></span>
+  <div class="rp-nav-links">
+    <a onclick="document.getElementById('rp-about').scrollIntoView({behavior:'smooth'})">About me</a>
+    <a onclick="document.getElementById('rp-resume').scrollIntoView({behavior:'smooth'})">Resume</a>
+    <a onclick="document.getElementById('rp-projects').scrollIntoView({behavior:'smooth'})">Projects</a>
+    <a onclick="document.getElementById('rp-contact').scrollIntoView({behavior:'smooth'})">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div id="rp-about" class="rp-hero">
+  <div class="rp-hero-left"></div>
+  <div class="rp-float-card">
+    <div class="rp-avatar"><img src="assets/pauline-headshot.png" alt="Pauline Kwok"></div>
+    <p class="rp-card-name">Pauline Kwok</p>
+    <div class="rp-card-divider"></div>
+    <p class="rp-card-role">Data Strategist &amp; Storyteller</p>
+    <div class="rp-card-socials">
+      <a href="https://www.linkedin.com/in/pauline-kwok/" target="_blank" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+      <a href="mailto:paulinekwok@live.com" aria-label="Email"><i class="ti ti-mail"></i></a>
+    </div>
+  </div>
+  <div class="rp-hero-right">
+    <p class="rp-hello">Hello.</p>
+    <p class="rp-hero-sub">Here's who I am and what I do</p>
+    <div class="rp-hero-btns">
+      <button class="rp-btn-solid" onclick="document.getElementById('rp-resume').scrollIntoView({behavior:'smooth'})">Resume</button>
+      <button class="rp-btn-outline" onclick="document.getElementById('rp-projects').scrollIntoView({behavior:'smooth'})">Projects</button>
+    </div>
+    <p class="rp-hero-bio">Most of my work starts with a question that sounds simple and a dataset that is anything but. I build dashboards, reporting systems, and data models that help teams understand what is happening, why it matters, and what to do next. My background spans hospitality, AdTech, SaaS, and design, which still shapes how I organize information and make complex findings easier to use.</p>
+  </div>
+</div>
+
+<div class="rp-rule"></div>
+
+<!-- RESUME -->
+<div id="rp-resume" class="rp-section">
+  <div class="rp-eyebrow">Work history</div>
+  <h2 class="rp-h2">Relevant Professional Experiences</h2>
+  <div class="rp-exp-header" style="justify-content:flex-end;">
+    <a class="rp-dl-btn" href="resume/pauline-kwok-resume.pdf" target="_blank" rel="noopener" style="text-decoration:none;"><i class="ti ti-download" style="font-size:12px;"></i> Download Full Resume</a>
+  </div>
+
+  <div class="rp-job">
+    <div><p class="rp-job-date">Oct 2025 to present</p><p class="rp-job-title">Analytics Manager, Revenue Operations</p><p class="rp-job-co">Grafana Labs</p><p class="rp-job-loc">Remote</p></div>
+    <div class="rp-job-body"><ul>
+      <li>Partner with GTM, RevOps, and Finance to build scalable analytics, reporting systems, and data models that improve visibility into pipeline health, rep performance, and revenue growth.</li>
+      <li>Developing GTM dashboards connecting Salesforce, BigQuery, dbt, and Grafana for pipeline, quota, and campaign influence.</li>
+      <li>Standardizing revenue KPIs across Sales and Marketing to improve forecast consistency and leadership decision-making.</li>
+    </ul></div>
+  </div>
+
+  <div class="rp-job">
+    <div><p class="rp-job-date">Jan 2025 to Oct 2025</p><p class="rp-job-title">Reporting Architecture Analyst</p><p class="rp-job-co">StackAdapt Inc</p><p class="rp-job-loc">Remote</p></div>
+    <div class="rp-job-body"><ul>
+      <li>Led enterprise reporting and analytics initiatives across Marketing, RevOps, and Product, combining dashboard development, KPI governance, data validation, and enablement.</li>
+      <li>Directed Tableau and ThoughtSpot reporting initiatives supporting campaign performance, product usage, and GTM strategy.</li>
+      <li>Revamped onboarding across four teams with documentation, video, and AI training, reducing ramp-up time by 40%.</li>
+    </ul></div>
+  </div>
+
+  <div class="rp-job">
+    <div><p class="rp-job-date">Sep 2021 to Jan 2025</p><p class="rp-job-title">Reporting Specialist</p><p class="rp-job-co">StackAdapt Inc</p><p class="rp-job-loc">Remote</p></div>
+    <div class="rp-job-body"><ul>
+      <li>Built and automated client-facing Tableau dashboards for pacing, ROI, reach and frequency, and geographic performance across programmatic campaigns.</li>
+      <li>Built SQL workflows across Snowflake, Redshift, and MySQL to extract, reconcile, and validate marketing performance data.</li>
+      <li>Standardized onboarding for 40+ analysts and mentored six Reporting Specialists, several later promoted.</li>
+    </ul></div>
+  </div>
+
+  <div class="rp-job">
+    <div><p class="rp-job-date">Aug 2022 to Jan 2024</p><p class="rp-job-title">Project Manager</p><p class="rp-job-co">Sockrates Worldwide LLC</p><p class="rp-job-loc">Remote</p></div>
+    <div class="rp-job-body"><ul>
+      <li>Managed global e-commerce and marketing projects across three continents, coordinating clients, designers, manufacturers, and vendors to deliver on time and within scope.</li>
+      <li>Introduced Salesforce reporting to improve visibility into client activity, project status, and performance metrics.</li>
+    </ul></div>
+  </div>
+
+  <div class="rp-job" style="margin-bottom:0;">
+    <div><p class="rp-job-date">Oct 2018 to Jan 2021</p><p class="rp-job-title">Rate and Pricing Analyst</p><p class="rp-job-co">Four Seasons Hotels and Resorts</p><p class="rp-job-loc">Toronto</p></div>
+    <div class="rp-job-body"><ul>
+      <li>Managed global rate governance and distribution reporting across 120+ properties, improving pricing accuracy, channel performance, and brand compliance.</li>
+      <li>Led the worldwide implementation of RateGain, replacing manual rate audits with a centralized digital monitoring platform.</li>
+      <li>Developed Power BI reporting for property, regional, and executive stakeholders covering rate performance and channel profitability.</li>
+    </ul></div>
+  </div>
+
+  <h3 style="font-size:13px;font-weight:500;color:#3a3a3a;margin:40px 0 18px;">Skills and tools</h3>
+  <div class="rp-skill-grid">
+    <div class="rp-skill-box"><p class="rp-skill-label">Analytics and BI</p><span class="rp-pill">Tableau</span><span class="rp-pill">Grafana</span><span class="rp-pill">Power BI</span><span class="rp-pill">ThoughtSpot</span></div>
+    <div class="rp-skill-box"><p class="rp-skill-label">Data and SQL</p><span class="rp-pill">BigQuery</span><span class="rp-pill">Snowflake</span><span class="rp-pill">dbt</span><span class="rp-pill">Redshift</span></div>
+    <div class="rp-skill-box"><p class="rp-skill-label">Strategy</p><span class="rp-pill">GTM reporting</span><span class="rp-pill">RevOps</span><span class="rp-pill">KPI frameworks</span><span class="rp-pill">Enablement</span></div>
+  </div>
+</div>
+
+<div class="rp-rule"></div>
+
+<!-- PROJECTS -->
+<div id="rp-projects" class="rp-section">
+  <div class="rp-eyebrow">Portfolio</div>
+  <h2 class="rp-h2">Projects</h2>
+
+  <div class="rp-proj-card">
+    <div class="rp-proj-body">
+      <p class="rp-proj-num">01</p>
+      <p class="rp-proj-title"><a href="https://public.tableau.com/app/profile/pauline.kwok/viz/Omvue/OmvueDashboard" target="_blank">Demo-to-Close Funnel (B2B SaaS) <i class="ti ti-external-link" style="font-size:13px;vertical-align:-1px;"></i></a></p>
+      <p class="rp-proj-sub">Sample Tableau Dashboard</p>
+      <p class="rp-proj-desc">A performance dashboard built in Tableau to track how effectively product demos convert into closed-won deals. The dashboard highlights drop-off points, conversion rates, and time-to-close trends across the B2B sales funnel. Designed for marketing and revenue teams to optimize lead handling and improve pipeline visibility.</p>
+    </div>
+    <div class="rp-proj-thumb"><img src="assets/Omvue.png" alt="Omvue demo-to-close Tableau dashboard"></div>
+  </div>
+
+  <div class="rp-proj-card">
+    <div class="rp-proj-body">
+      <p class="rp-proj-num">02</p>
+      <p class="rp-proj-title"><a href="https://drive.google.com/file/d/1nVZ-kdf9BAyodx_hX8hQYeJOitIwX7ak/view" target="_blank">Company Health and Workforce Overview <i class="ti ti-external-link" style="font-size:13px;vertical-align:-1px;"></i></a></p>
+      <p class="rp-proj-sub">Sample ThoughtSpot Dashboard</p>
+      <p class="rp-proj-desc">A company health and workforce dashboard built in ThoughtSpot to support staffing decisions, license cleanup, and workforce planning across brands and locations. Focused on surfacing operational gaps, adoption trends, and QA opportunities with a self-serve, cross-functional audience in mind.</p>
+    </div>
+    <div class="rp-proj-thumb"><img src="assets/thoughtspot.png" alt="ThoughtSpot workforce dashboard"></div>
+  </div>
+
+  <div class="rp-proj-card">
+    <div class="rp-proj-body">
+      <p class="rp-proj-num">03</p>
+      <p class="rp-proj-title"><a href="https://datastudio.google.com/u/0/reporting/d1b2b09f-7a4b-401a-a083-7255ba2357d4" target="_blank">Advertising Performance for Travel <i class="ti ti-external-link" style="font-size:13px;vertical-align:-1px;"></i></a></p>
+      <p class="rp-proj-sub">Sample Looker Studio Dashboard</p>
+      <p class="rp-proj-desc">Dashboard analyzing travel campaign performance (ROAS, CPB, CTR) across six advertisers, identifying top performers (324% ROAS) and optimization opportunities through comparative analysis and visualization.</p>
+    </div>
+    <div class="rp-proj-thumb"><img src="assets/AeroTrav.png" alt="AeroTrav advertising performance Looker Studio dashboard"></div>
+  </div>
+
+  <div class="rp-proj-card">
+    <div class="rp-proj-body">
+      <p class="rp-proj-num">04</p>
+      <p class="rp-proj-title"><a href="https://1drv.ms/b/c/3b6dfa6dd0219d85/Eez5UMRKXYtGgRVU1ApjG0kB_7_GzMMxfFITWupsOdAnCg?e=DP1BdQ" target="_blank">Navaya Hotels and Resorts <i class="ti ti-external-link" style="font-size:13px;vertical-align:-1px;"></i></a></p>
+      <p class="rp-proj-sub">Power BI — Export PDF Sample</p>
+      <p class="rp-proj-desc">A hospitality analytics dashboard built in Power BI covering booking patterns, revenue insights, guest segmentation by loyalty tier, and booking status analysis for a Singapore property. Designed to support data-driven decision-making across revenue management, marketing, and operations.</p>
+      <a href="mailto:paulinekwok@live.com?subject=Navaya%20PBIX%20File%20Request" class="rp-proj-email-note"><i class="ti ti-mail" style="font-size:12px;"></i> Email me to request the PBIX file</a>
+    </div>
+    <div class="rp-proj-thumb"><img src="assets/Navaya.png" alt="Navaya Hotels Power BI dashboard"></div>
+  </div>
+
+  <div class="rp-proj-card">
+    <div class="rp-proj-body">
+      <p class="rp-proj-num">05</p>
+      <p class="rp-proj-title"><a href="https://public.tableau.com/app/profile/pauline.kwok/viz/PeopleAnalytics1_17424890407150/MainDashboard?publish=yes" target="_blank">People Analytics Dashboard (Diversity) <i class="ti ti-external-link" style="font-size:13px;vertical-align:-1px;"></i></a></p>
+      <p class="rp-proj-sub">Sample Tableau Dashboard</p>
+      <p class="rp-proj-desc">An interactive Tableau dashboard tracking headcount, attrition, diversity, and hiring trends across an organization. Features filters for departments, locations, and time periods so HR and people teams can uncover workforce insights and act on them with confidence.</p>
+    </div>
+    <div class="rp-proj-thumb"><img src="assets/people-analytics.png" alt="People Analytics Tableau dashboard"></div>
+  </div>
+</div>
+
+<div class="rp-rule"></div>
+
+<!-- CONTACT -->
+<div id="rp-contact" class="rp-contact-wrap">
+  <div class="rp-contact-inner">
+    <div class="rp-eyebrow" style="justify-content:center;">Get in touch</div>
+    <h2 class="rp-h2" style="margin-bottom:0;">Let's talk.</h2>
+    <form class="rp-contact-form" id="rp-form" action="https://formspree.io/f/xvzjbggj" method="POST">
+      <div class="rp-form-row">
+        <div class="rp-form-field"><label>First name</label><input type="text" name="first_name" placeholder="Jane" required></div>
+        <div class="rp-form-field"><label>Last name</label><input type="text" name="last_name" placeholder="Smith" required></div>
+      </div>
+      <div class="rp-form-field"><label>Email</label><input type="email" name="email" placeholder="jane@company.com" required></div>
+      <div class="rp-form-field"><label>Subject</label><input type="text" name="subject" placeholder="Collaboration, opportunity, or just saying hi" required></div>
+      <div class="rp-form-field"><label>Message</label><textarea name="message" placeholder="Tell me a little about what you have in mind." required></textarea></div>
+      <input type="hidden" name="_subject" value="New message from paulinekwok.com">
+      <button class="rp-btn-solid" type="submit" id="rp-form-btn" style="width:100%;">Send message</button>
+      <p class="rp-form-status" id="rp-form-status"></p>
+    </form>
+  </div>
+</div>
+
+<footer class="rp-footer">
+  <p class="rp-footer-copy">2025 Pauline Kwok</p>
+  <div class="rp-footer-cols">
+    <div><p class="rp-footer-col-label">Write</p><p class="rp-footer-col-val">paulinekwok@live.com</p></div>
+    <div><p class="rp-footer-col-label">Connect</p><p class="rp-footer-col-val" style="display:flex;gap:10px;align-items:center;"><i class="ti ti-brand-linkedin" style="color:#8EAFAA;font-size:15px;"></i><i class="ti ti-mail" style="color:#8EAFAA;font-size:15px;"></i></p></div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var form = document.getElementById('rp-form');
+  var btn = document.getElementById('rp-form-btn');
+  var status = document.getElementById('rp-form-status');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    status.textContent = '';
+    status.className = 'rp-form-status';
+    var data = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response) {
+      if (response.ok) {
+        status.textContent = "Thanks! Your message has been sent.";
+        status.className = 'rp-form-status ok';
+        form.reset();
+      } else {
+        return response.json().then(function(data) {
+          var msg = (data && data.errors) ? data.errors.map(function(e){return e.message;}).join(', ') : 'Something went wrong. Please try again or email me directly.';
+          status.textContent = msg;
+          status.className = 'rp-form-status err';
+        });
+      }
+    }).catch(function() {
+      status.textContent = 'Something went wrong. Please try again or email me directly.';
+      status.className = 'rp-form-status err';
+    }).finally(function() {
+      btn.disabled = false;
+      btn.textContent = 'Send message';
+    });
+  });
+})();
+</script>
+</body>
+</html>
