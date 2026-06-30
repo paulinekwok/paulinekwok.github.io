@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pauline Kwok — Data Strategist & Storyteller</title>
+<title>Pauline Kwok: Data Strategist & Storyteller</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
@@ -87,6 +87,164 @@
   .rp-footer-cols{display:flex;gap:40px;}
   .rp-footer-col-label{font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:#8EAFAA;margin:0 0 4px;}
   .rp-footer-col-val{font-size:11px;color:rgba(255,255,255,0.65);margin:0;}
+
+  .rp-footer-col-val a{color:inherit;text-decoration:none;}
+  .rp-footer-col-val a:hover{color:#C9DFDA;}
+  .rp-footer-socials{display:flex;gap:12px;align-items:center;}
+  .rp-footer-socials a{color:#8EAFAA;font-size:16px;text-decoration:none;transition:opacity 0.2s;}
+  .rp-footer-socials a:hover{opacity:0.75;}
+
+  @media (max-width: 760px){
+    .rp-nav{
+      padding:14px 18px;
+      gap:16px;
+    }
+    .rp-nav-links{
+      gap:12px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .rp-nav-links a{
+      font-size:10.5px;
+    }
+
+    .rp-hero{
+      display:block;
+      min-height:auto;
+    }
+    .rp-hero-left{
+      height:230px;
+    }
+    .rp-float-card{
+      position:relative;
+      left:auto;
+      top:auto;
+      transform:none;
+      width:calc(100% - 36px);
+      max-width:320px;
+      margin:-145px auto 26px;
+      padding:28px 24px;
+    }
+    .rp-avatar{
+      width:132px;
+      height:132px;
+    }
+    .rp-hero-right{
+      padding:16px 24px 54px;
+    }
+    .rp-hello{
+      font-size:56px;
+    }
+    .rp-hero-sub{
+      margin-bottom:24px;
+    }
+    .rp-hero-btns{
+      flex-wrap:wrap;
+      margin-bottom:26px;
+    }
+    .rp-hero-bio{
+      max-width:none;
+      line-height:1.75;
+    }
+
+    .rp-section{
+      padding:54px 20px;
+    }
+    .rp-h2{
+      font-size:36px;
+      margin-bottom:32px;
+    }
+    .rp-exp-header{
+      justify-content:flex-start !important;
+    }
+    .rp-job{
+      grid-template-columns:1fr;
+      gap:14px;
+      padding:22px 20px;
+    }
+    .rp-job-body ul{
+      padding-left:18px;
+    }
+    .rp-skill-grid{
+      grid-template-columns:1fr;
+    }
+
+    .rp-proj-card{
+      grid-template-columns:1fr;
+    }
+    .rp-proj-body{
+      padding:24px 22px;
+    }
+    .rp-proj-thumb{
+      height:230px;
+      border-left:0;
+      border-top:0.5px solid #edeae5;
+    }
+
+    .rp-contact-wrap{
+      padding:54px 20px;
+    }
+    .rp-contact-form{
+      padding:26px 20px;
+      margin-top:28px;
+    }
+    .rp-form-row{
+      grid-template-columns:1fr;
+      gap:0;
+    }
+
+    .rp-footer{
+      padding:28px 20px;
+      flex-direction:column;
+      align-items:flex-start;
+      gap:20px;
+    }
+    .rp-footer-copy{
+      margin:0;
+    }
+    .rp-footer-cols{
+      width:100%;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+  }
+
+  @media (max-width: 430px){
+    .rp-nav{
+      align-items:flex-start;
+    }
+    .rp-nav-links{
+      max-width:235px;
+      row-gap:8px;
+    }
+    .rp-hero-left{
+      height:210px;
+    }
+    .rp-float-card{
+      margin-top:-128px;
+    }
+    .rp-avatar{
+      width:120px;
+      height:120px;
+    }
+    .rp-hello{
+      font-size:50px;
+    }
+    .rp-btn-solid,
+    .rp-btn-outline{
+      padding:11px 23px;
+    }
+    .rp-h2{
+      font-size:33px;
+    }
+    .rp-proj-title{
+      font-size:19px;
+    }
+    .rp-proj-thumb{
+      height:205px;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -110,7 +268,8 @@
     <div class="rp-card-divider"></div>
     <p class="rp-card-role">Data Strategist &amp; Storyteller</p>
     <div class="rp-card-socials">
-      <a href="https://www.linkedin.com/in/pauline-kwok/" target="_blank" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+      <a href="https://www.linkedin.com/in/pauline-kwok/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+      <a href="https://github.com/paulinekwok" target="_blank" rel="noopener" aria-label="GitHub"><i class="ti ti-brand-github"></i></a>
       <a href="mailto:paulinekwok@live.com" aria-label="Email"><i class="ti ti-mail"></i></a>
     </div>
   </div>
@@ -270,15 +429,28 @@
 </div>
 
 <footer class="rp-footer">
-  <p class="rp-footer-copy">2025 Pauline Kwok</p>
+  <p class="rp-footer-copy"><span id="rp-current-year"></span> Pauline Kwok</p>
   <div class="rp-footer-cols">
-    <div><p class="rp-footer-col-label">Write</p><p class="rp-footer-col-val">paulinekwok@live.com</p></div>
-    <div><p class="rp-footer-col-label">Connect</p><p class="rp-footer-col-val" style="display:flex;gap:10px;align-items:center;"><i class="ti ti-brand-linkedin" style="color:#8EAFAA;font-size:15px;"></i><i class="ti ti-mail" style="color:#8EAFAA;font-size:15px;"></i></p></div>
+    <div>
+      <p class="rp-footer-col-label">Write</p>
+      <p class="rp-footer-col-val"><a href="mailto:paulinekwok@live.com">paulinekwok@live.com</a></p>
+    </div>
+    <div>
+      <p class="rp-footer-col-label">Connect</p>
+      <p class="rp-footer-col-val rp-footer-socials">
+        <a href="https://www.linkedin.com/in/pauline-kwok/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+        <a href="https://github.com/paulinekwok" target="_blank" rel="noopener" aria-label="GitHub"><i class="ti ti-brand-github"></i></a>
+        <a href="mailto:paulinekwok@live.com" aria-label="Email"><i class="ti ti-mail"></i></a>
+      </p>
+    </div>
   </div>
 </footer>
 
 <script>
 (function() {
+  var year = document.getElementById('rp-current-year');
+  if (year) year.textContent = new Date().getFullYear();
+
   var form = document.getElementById('rp-form');
   var btn = document.getElementById('rp-form-btn');
   var status = document.getElementById('rp-form-status');
